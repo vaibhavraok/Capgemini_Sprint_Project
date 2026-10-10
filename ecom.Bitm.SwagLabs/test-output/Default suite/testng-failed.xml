@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="ecom.Bitm.SwagLabs.addToCart.CartPage_Test">
+        <methods>
+          <include name="removedProductIsNotPresentInCart"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="addedProductDisplayedInCart"/>
+          <include name="At"/>
+          <include name="removeProductFromCart"/>
+          <include name="beforeMethod"/>
+          <include name="sameProductIsNotUnexpectedlyDuplicated"/>
+          <include name="Bt"/>
+          <include name="selectedProductRemainsWhenReturningToCart"/>
+          <include name="beforeSuite"/>
+          <include name="productDetailsMatchBetweenProductsAndCart"/>
+          <include name="afterMethod"/>
+          <include name="multipleProductsDisplayedInCart"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.addToCart.CartPage_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

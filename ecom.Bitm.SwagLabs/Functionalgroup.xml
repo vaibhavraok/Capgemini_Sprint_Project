@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Functional Group">
+    <groups>
+        <run>
+            <include name="functional"/>
+        </run>
+    </groups>
+    <test name="Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ecom.Bitm.SwagLabs.login.Loginpage_Test"/>
+            <class name="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
+            <class name="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
+            <class name="ecom.Bitm.SwagLabs.addToCart.CartPage_Test"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Batch]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="ecom.Bitm.SwagLabs.product.ProductPage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Productpagerefresh"/>
+          <include name="productVisibleData"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="At"/>
+          <include name="productcartnavigation"/>
+          <include name="productvisible"/>
+          <include name="beforeMethod"/>
+          <include name="CorrespondingProductPage"/>
+          <include name="Bt"/>
+          <include name="Productpage1"/>
+          <include name="productCartControl"/>
+          <include name="productNavigationMenu"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="ExpectedProduct"/>
+          <include name="VerifyCartBadge"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.product.ProductPage_Test -->
+      <class name="ecom.Bitm.SwagLabs.login.Loginpage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Passwordinvalid"/>
+          <include name="blankUsernameinvalid"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="At"/>
+          <include name="beforeMethod"/>
+          <include name="blankPasswordandUsernameinvalid"/>
+          <include name="Bt"/>
+          <include name="blankPasswordinvalid"/>
+          <include name="loginvalid"/>
+          <include name="trailingspacesusename"/>
+          <include name="beforeSuite"/>
+          <include name="logininvalid"/>
+          <include name="leadingspacesusename"/>
+          <include name="loginverify"/>
+          <include name="afterMethod"/>
+          <include name="Usernameinvalid"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.login.Loginpage_Test -->
+      <class name="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="orderConfirmation"/>
+          <include name="afterSuite"/>
+          <include name="validCustomerInfo"/>
+          <include name="postalCodeMissing"/>
+          <include name="beforeClass"/>
+          <include name="paymentShippingInfo"/>
+          <include name="At"/>
+          <include name="beforeMethod"/>
+          <include name="Bt"/>
+          <include name="firstNameMissing"/>
+          <include name="cartClearedAfterPurchase"/>
+          <include name="purchaseCompleted"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="lastNameMissing"/>
+          <include name="cartProductInOverview"/>
+          <include name="allFieldsMissing"/>
+          <include name="checkoutPageOpens"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test -->
+      <class name="ecom.Bitm.SwagLabs.addToCart.CartPage_Test">
+        <methods>
+          <include name="removedProductIsNotPresentInCart"/>
+          <include name="afterClass"/>
+          <include name="addProductToCart"/>
+          <include name="cartBadgeUpdated"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="addedProductDisplayedInCart"/>
+          <include name="At"/>
+          <include name="removeProductFromCart"/>
+          <include name="beforeMethod"/>
+          <include name="sameProductIsNotUnexpectedlyDuplicated"/>
+          <include name="Bt"/>
+          <include name="selectedProductRemainsWhenReturningToCart"/>
+          <include name="beforeSuite"/>
+          <include name="productDetailsMatchBetweenProductsAndCart"/>
+          <include name="afterMethod"/>
+          <include name="addToCartButtonVisible"/>
+          <include name="multipleProductsDisplayedInCart"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.addToCart.CartPage_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Batch] -->

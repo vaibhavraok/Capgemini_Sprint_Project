@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Integration Group]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="integration"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ecom.Bitm.SwagLabs.addToCart.CartPage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="productDetailsMatchBetweenProductsAndCart"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="addedProductDisplayedInCart"/>
+          <include name="At"/>
+          <include name="beforeMethod"/>
+          <include name="Bt"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.addToCart.CartPage_Test -->
+      <class name="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="cartClearedAfterPurchase"/>
+          <include name="purchaseCompleted"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="At"/>
+          <include name="cartProductInOverview"/>
+          <include name="beforeMethod"/>
+          <include name="Bt"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test -->
+      <class name="ecom.Bitm.SwagLabs.login.Loginpage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="logininvalid"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="At"/>
+          <include name="beforeMethod"/>
+          <include name="Bt"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.login.Loginpage_Test -->
+      <class name="ecom.Bitm.SwagLabs.product.ProductPage_Test">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="At"/>
+          <include name="VerifyCartBadge"/>
+          <include name="beforeMethod"/>
+          <include name="Bt"/>
+          <include name="CorrespondingProductPage"/>
+        </methods>
+      </class> <!-- ecom.Bitm.SwagLabs.product.ProductPage_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Integration Group] -->

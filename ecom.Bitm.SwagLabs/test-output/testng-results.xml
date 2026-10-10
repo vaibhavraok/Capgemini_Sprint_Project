@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Expected product is visible]]>
+    </line>
+    <line>
+      <![CDATA[product Data is visible]]>
+    </line>
+    <line>
+      <![CDATA[Payment and shipping information displayed]]>
+    </line>
+    <line>
+      <![CDATA[Order confirmation message displayed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-10-10T14:14:24 IST" name="System Group" finished-at="2026-10-10T14:14:42 IST" duration-ms="18272">
+    <groups>
+      <group name="system">
+        <method signature="CheckoutPage_Test.paymentShippingInfo(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" name="paymentShippingInfo" class="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
+        <method signature="ProductPage_Test.ExpectedProduct()[pri:8, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" name="ExpectedProduct" class="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
+        <method signature="ProductPage_Test.productVisibleData()[pri:9, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" name="productVisibleData" class="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
+        <method signature="CheckoutPage_Test.orderConfirmation(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" name="orderConfirmation" class="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
+      </group> <!-- system -->
+      <group name="pos">
+        <method signature="CheckoutPage_Test.paymentShippingInfo(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" name="paymentShippingInfo" class="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
+        <method signature="ProductPage_Test.ExpectedProduct()[pri:8, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" name="ExpectedProduct" class="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
+        <method signature="ProductPage_Test.productVisibleData()[pri:9, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" name="productVisibleData" class="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
+        <method signature="CheckoutPage_Test.orderConfirmation(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" name="orderConfirmation" class="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
+      </group> <!-- pos -->
+    </groups>
+    <test started-at="2026-10-10T14:14:24 IST" name="Test" finished-at="2026-10-10T14:14:42 IST" duration-ms="18272">
+      <class name="ecom.Bitm.SwagLabs.login.Loginpage_Test">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:ecom.Bitm.SwagLabs.login.Loginpage_Test@bcec361]" started-at="2026-10-10T14:14:24 IST" name="beforeSuite" finished-at="2026-10-10T14:14:24 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="Bt()[pri:0, instance:ecom.Bitm.SwagLabs.login.Loginpage_Test@bcec361]" started-at="2026-10-10T14:14:24 IST" name="Bt" finished-at="2026-10-10T14:14:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bt -->
+        <test-method is-config="true" signature="At()[pri:0, instance:ecom.Bitm.SwagLabs.login.Loginpage_Test@bcec361]" started-at="2026-10-10T14:14:42 IST" name="At" finished-at="2026-10-10T14:14:42 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- At -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:ecom.Bitm.SwagLabs.login.Loginpage_Test@bcec361]" started-at="2026-10-10T14:14:42 IST" name="afterSuite" finished-at="2026-10-10T14:14:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- ecom.Bitm.SwagLabs.login.Loginpage_Test -->
+      <class name="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:36 IST" name="beforeClass" finished-at="2026-10-10T14:14:37 IST" duration-ms="1554" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:39 IST" name="beforeMethod" finished-at="2026-10-10T14:14:39 IST" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="paymentShippingInfo(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:39 IST" name="paymentShippingInfo" data-provider="checkoutData" finished-at="2026-10-10T14:14:40 IST" duration-ms="1296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vaibhav]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[K]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[583101]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Payment and shipping information displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- paymentShippingInfo -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:40 IST" name="afterMethod" finished-at="2026-10-10T14:14:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:41 IST" name="beforeMethod" finished-at="2026-10-10T14:14:41 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="orderConfirmation(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:41 IST" name="orderConfirmation" data-provider="checkoutData" finished-at="2026-10-10T14:14:42 IST" duration-ms="1234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vaibhav]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[K]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[583101]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Order confirmation message displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orderConfirmation -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:42 IST" name="afterMethod" finished-at="2026-10-10T14:14:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@b2c9a9c]" started-at="2026-10-10T14:14:42 IST" name="afterClass" finished-at="2026-10-10T14:14:42 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test -->
+      <class name="ecom.Bitm.SwagLabs.product.ProductPage_Test">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:24 IST" name="beforeClass" finished-at="2026-10-10T14:14:26 IST" duration-ms="2248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:26 IST" name="beforeMethod" finished-at="2026-10-10T14:14:27 IST" duration-ms="531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="ExpectedProduct()[pri:8, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:27 IST" name="ExpectedProduct" finished-at="2026-10-10T14:14:31 IST" duration-ms="4338" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Expected product is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ExpectedProduct -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:31 IST" name="afterMethod" finished-at="2026-10-10T14:14:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:31 IST" name="beforeMethod" finished-at="2026-10-10T14:14:31 IST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="productVisibleData()[pri:9, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:31 IST" name="productVisibleData" finished-at="2026-10-10T14:14:35 IST" duration-ms="4293" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[product Data is visible]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- productVisibleData -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:35 IST" name="afterMethod" finished-at="2026-10-10T14:14:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ecom.Bitm.SwagLabs.product.ProductPage_Test@2362f559]" started-at="2026-10-10T14:14:35 IST" name="afterClass" finished-at="2026-10-10T14:14:36 IST" duration-ms="543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ecom.Bitm.SwagLabs.product.ProductPage_Test -->
+    </test> <!-- Test -->
+  </suite> <!-- System Group -->
+</testng-results>

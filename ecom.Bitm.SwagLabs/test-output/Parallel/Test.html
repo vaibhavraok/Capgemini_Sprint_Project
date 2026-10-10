@@ -1,0 +1,572 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>41/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Oct 10 10:01:15 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>57 seconds (57610 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.productDetailsMatchBetweenProductsAndCart()'><b>productDetailsMatchBetweenProductsAndCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-295226201" onClick='toggleBox("Output-295226201", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-295226201" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-295226201">
+Product name and price match<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.orderConfirmation()'><b>orderConfirmation</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-744062170" onClick='toggleBox("Output-744062170", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-744062170" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-744062170">
+Order confirmation message displayed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.cartProductInOverview()'><b>cartProductInOverview</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-257824729" onClick='toggleBox("Output-257824729", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-257824729" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-257824729">
+Cart product carried into Checkout Overview<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.validCustomerInfo()'><b>validCustomerInfo</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-1330827674" onClick='toggleBox("Output-1330827674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1330827674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1330827674">
+Valid customer information accepted<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.removedProductIsNotPresentInCart()'><b>removedProductIsNotPresentInCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1807656885" onClick='toggleBox("Output-1807656885", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1807656885" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1807656885">
+Removed product is not present in the cart<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.blankPasswordandUsernameinvalid()'><b>blankPasswordandUsernameinvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-317668579" onClick='toggleBox("Output-317668579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-317668579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-317668579">
+Login rejected by both blank username and password<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.Usernameinvalid()'><b>Usernameinvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-1839434414" onClick='toggleBox("Output-1839434414", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1839434414" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1839434414">
+Login rejected by invalid Username<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.blankUsernameinvalid()'><b>blankUsernameinvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-1695860122" onClick='toggleBox("Output-1695860122", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1695860122" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1695860122">
+Login rejected by Blank Username<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.ExpectedProduct()'><b>ExpectedProduct</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-309747768" onClick='toggleBox("Output-309747768", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-309747768" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-309747768">
+Expected product is visible<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.productvisible()'><b>productvisible</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-1379974287" onClick='toggleBox("Output-1379974287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1379974287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1379974287">
+Products are visible<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.loginverify()'><b>loginverify</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-2051764632" onClick='toggleBox("Output-2051764632", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2051764632" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2051764632">
+Login page is displayed with username, password and Login controls<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.addProductToCart()'><b>addProductToCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1849900119" onClick='toggleBox("Output-1849900119", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1849900119" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1849900119">
+Product added to cart and button changed to Remove<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.firstNameMissing()'><b>firstNameMissing</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-235861723" onClick='toggleBox("Output-235861723", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-235861723" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-235861723">
+Checkout correctly blocked for missing first name<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.addToCartButtonVisible()'><b>addToCartButtonVisible</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-430681651" onClick='toggleBox("Output-430681651", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-430681651" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-430681651">
+Add to cart button is visible<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.Passwordinvalid()'><b>Passwordinvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-1721823417" onClick='toggleBox("Output-1721823417", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1721823417" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1721823417">
+Login rejected by invalid Password<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.CorrespondingProductPage()'><b>CorrespondingProductPage</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-1797508730" onClick='toggleBox("Output-1797508730", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1797508730" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1797508730">
+Corresponding Product is navigated<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.productNavigationMenu()'><b>productNavigationMenu</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-210849096" onClick='toggleBox("Output-210849096", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-210849096" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-210849096">
+Navigation menu is working<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.Productpagerefresh()'><b>Productpagerefresh</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-944404435" onClick='toggleBox("Output-944404435", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-944404435" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-944404435">
+User is logged in After refresh<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.purchaseCompleted()'><b>purchaseCompleted</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-767380583" onClick='toggleBox("Output-767380583", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-767380583" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-767380583">
+Valid purchase completed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.cartBadgeUpdated()'><b>cartBadgeUpdated</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-922794909" onClick='toggleBox("Output-922794909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-922794909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-922794909">
+Cart badge updated to 1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.leadingspacesusename()'><b>leadingspacesusename</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-926298601" onClick='toggleBox("Output-926298601", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-926298601" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-926298601">
+Login rejected by Leading Space in username<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.productcartnavigation()'><b>productcartnavigation</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-865262578" onClick='toggleBox("Output-865262578", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-865262578" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-865262578">
+Cart icon is clickable and cart page is opened<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.checkoutPageOpens()'><b>checkoutPageOpens</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br/>
+<a href="#Output-1200334697" onClick='toggleBox("Output-1200334697", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1200334697" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1200334697">
+Checkout page opened successfully<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.lastNameMissing()'><b>lastNameMissing</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-1419048758" onClick='toggleBox("Output-1419048758", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1419048758" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1419048758">
+Checkout correctly blocked for missing last name<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.blankPasswordinvalid()'><b>blankPasswordinvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-695690836" onClick='toggleBox("Output-695690836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-695690836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-695690836">
+Login rejected by Blank Password<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.paymentShippingInfo()'><b>paymentShippingInfo</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-1208911979" onClick='toggleBox("Output-1208911979", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1208911979" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1208911979">
+Payment and shipping information displayed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.loginvalid()'><b>loginvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-68951034" onClick='toggleBox("Output-68951034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-68951034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-68951034">
+Login test executed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.cartClearedAfterPurchase()'><b>cartClearedAfterPurchase</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-67402357" onClick='toggleBox("Output-67402357", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-67402357" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-67402357">
+Completed purchase cleared the cart<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.trailingspacesusename()'><b>trailingspacesusename</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-684547647" onClick='toggleBox("Output-684547647", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-684547647" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-684547647">
+Login rejected by Trailing space in Username<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.selectedProductRemainsWhenReturningToCart()'><b>selectedProductRemainsWhenReturningToCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1273639832" onClick='toggleBox("Output-1273639832", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1273639832" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1273639832">
+Selected product remains in cart<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.VerifyCartBadge()'><b>VerifyCartBadge</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-828313900" onClick='toggleBox("Output-828313900", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-828313900" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-828313900">
+Product cart page is updated<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.removeProductFromCart()'><b>removeProductFromCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1833841850" onClick='toggleBox("Output-1833841850", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1833841850" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1833841850">
+Product removed successfully<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.multipleProductsDisplayedInCart()'><b>multipleProductsDisplayedInCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1838098170" onClick='toggleBox("Output-1838098170", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1838098170" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1838098170">
+Multiple products are displayed correctly<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.allFieldsMissing()'><b>allFieldsMissing</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br/>
+<a href="#Output-543252308" onClick='toggleBox("Output-543252308", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-543252308" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-543252308">
+Checkout correctly blocked for missing mandatory field<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test.postalCodeMissing()'><b>postalCodeMissing</b><br>Test class: ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test<br>Parameters: Vaibhav, K, 583101<br/>
+<a href="#Output-2086414313" onClick='toggleBox("Output-2086414313", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2086414313" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2086414313">
+Checkout correctly blocked for missing postal code<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test@2aceadd4</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.productVisibleData()'><b>productVisibleData</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-1530964537" onClick='toggleBox("Output-1530964537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1530964537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1530964537">
+product Data is visible<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.sameProductIsNotUnexpectedlyDuplicated()'><b>sameProductIsNotUnexpectedlyDuplicated</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-1076540817" onClick='toggleBox("Output-1076540817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1076540817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1076540817">
+Same product is not unexpectedly duplicated<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.login.Loginpage_Test.logininvalid()'><b>logininvalid</b><br>Test class: ecom.Bitm.SwagLabs.login.Loginpage_Test<br/>
+<a href="#Output-1497745977" onClick='toggleBox("Output-1497745977", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1497745977" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1497745977">
+Login rejected<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.login.Loginpage_Test@1c1bbc4e</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.Productpage1()'><b>Productpage1</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-590812106" onClick='toggleBox("Output-590812106", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-590812106" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-590812106">
+Product page is visible<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.product.ProductPage_Test.productCartControl()'><b>productCartControl</b><br>Test class: ecom.Bitm.SwagLabs.product.ProductPage_Test<br/>
+<a href="#Output-1272835875" onClick='toggleBox("Output-1272835875", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1272835875" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1272835875">
+Every product has cart control<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>ecom.Bitm.SwagLabs.product.ProductPage_Test@24269709</td></tr>
+<tr>
+<td title='ecom.Bitm.SwagLabs.addToCart.CartPage_Test.addedProductDisplayedInCart()'><b>addedProductDisplayedInCart</b><br>Test class: ecom.Bitm.SwagLabs.addToCart.CartPage_Test<br/>
+<a href="#Output-918634686" onClick='toggleBox("Output-918634686", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-918634686" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-918634686">
+Added product is displayed in cart<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>ecom.Bitm.SwagLabs.addToCart.CartPage_Test@24aed80c</td></tr>
+</table><p>
+</body>
+</html>
