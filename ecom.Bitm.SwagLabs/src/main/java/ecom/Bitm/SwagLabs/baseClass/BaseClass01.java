@@ -41,7 +41,7 @@ public class BaseClass01 {
     
     @Parameters("browser")
     @BeforeClass(alwaysRun = true,groups = {"smoke","integration","functional","system","pos","neg"})
-    public void beforeClass(String browser) throws IOException {
+    public void beforeClass(@Optional("chrome") String browser) throws IOException {
 //        String browser = PropertyFileUtility.getData("browser");
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
