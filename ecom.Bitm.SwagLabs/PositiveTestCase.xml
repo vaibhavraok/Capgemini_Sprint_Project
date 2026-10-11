@@ -13,6 +13,7 @@
             <class name="ecom.Bitm.SwagLabs.product.ProductPage_Test"/>
             <class name="ecom.Bitm.SwagLabs.checkout.CheckoutPage_Test"/>
             <class name="ecom.Bitm.SwagLabs.addToCart.CartPage_Test"/>
+            <class name="ecom.Bitm.SwagLabs.hamburger.HamburgerMenu_Test"/>
         </classes>
     </test>
 </suite>
