@@ -210,24 +210,46 @@ public class ProductsPage {
     public void addProductToCart(String productName) {
     waitForInventoryPage();
 
-    for (WebElement item : driver.findElements(By.cssSelector(".inventory_item"))) {
-        String actualName = item.findElement(By.className("inventory_item_name")).getText().trim();
+    String expectedName = productName.trim();
 
-        if (actualName.equals(productName.trim())) {
-            WebElement button = item.findElement(By.tagName("button"));
+    By buttonLocator = By.xpath(
+        "//div[contains(@class,'inventory_item')]" +
+        "[.//div[contains(@class,'inventory_item_name') " +
+        "and normalize-space()='" + expectedName + "']]//button"
+    );
 
-            wait.until(ExpectedConditions.elementToBeClickable(button));
-            button.click();
+    try {
+        WebElement button = wait.until(
+            ExpectedConditions.elementToBeClickable(buttonLocator)
+        );
 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.id("remove-" + productName.trim().toLowerCase().replace(" ", "-"))
-            ));
-
+        // Avoid adding the same product again if it is already in the cart.
+        if (button.getText().trim().equals("Remove")) {
             return;
         }
-    }
 
-    Assert.fail("Product not found: " + productName);
+        // Click the Add to cart button.
+        button.click();
+
+        // Wait until the button changes to Remove.
+        wait.until(driver -> {
+            try {
+                WebElement updatedButton =
+                    driver.findElement(buttonLocator);
+
+                return updatedButton.isDisplayed() && updatedButton.getText().trim().equals("Remove");
+
+            } catch (org.openqa.selenium.StaleElementReferenceException e) {
+                return false;
+
+            } catch (org.openqa.selenium.NoSuchElementException e) {
+                return false;
+            }
+        });
+
+    } catch (org.openqa.selenium.TimeoutException e) {
+        Assert.fail("Failed to add product to cart or verify its Remove button: "+ expectedName,e);
+    }
 }
 
     public void verifyAddToCartButtonVisible(String productName) {
