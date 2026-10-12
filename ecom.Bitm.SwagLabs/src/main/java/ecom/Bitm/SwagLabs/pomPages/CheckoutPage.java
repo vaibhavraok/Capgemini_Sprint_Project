@@ -99,27 +99,39 @@ public class CheckoutPage {
     }
 
     public void verifyProductInOverview(String productName, String expectedPrice) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("inventory_item_name")));
-        List<WebElement> products = driver.findElements(By.className("inventory_item_name"));
-        boolean found = false;
-        for (WebElement product : products) {
-            if (product.getText().equals(productName)) {
-                found = true;
-                break;
-            }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("inventory_item_name")));
+
+    List<WebElement> products = wait.until(
+        ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("inventory_item_name"))
+    );
+
+    boolean found = false;
+
+    for (WebElement product : products) {
+        if (product.getText().equals(productName)) {
+            found = true;
+            break;
         }
-        Assert.assertTrue(found, "Product is not present in Checkout Overview: " + productName);
-        List<WebElement> prices = driver.findElements(By.className("inventory_item_price"));
-        boolean priceFound = false;
-        for (WebElement price : prices) {
-            if (price.getText().equals(expectedPrice)) {
-                priceFound = true;
-                break;
-            }
-        }
-        Assert.assertTrue(priceFound, "Expected price is not displayed: " + expectedPrice);
-        System.out.println("Product and price are correct in Checkout Overview");
     }
+
+    Assert.assertTrue(found, "Product is not present in Checkout Overview: " + productName);
+
+    List<WebElement> prices = wait.until(
+        ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("inventory_item_price"))
+    );
+
+    boolean priceFound = false;
+
+    for (WebElement price : prices) {
+        if (price.getText().equals(expectedPrice)) {
+            priceFound = true;
+            break;
+        }
+    }
+
+    Assert.assertTrue(priceFound, "Expected price is not displayed: " + expectedPrice);
+    System.out.println("Product and price are correct in Checkout Overview");
+}
 
     public void verifyPaymentAndShippingInformation() {
         String summary = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("summary_info"))).getText();
@@ -167,8 +179,8 @@ public class CheckoutPage {
     }
 
     public String getErrorMessage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h3[data-test='error']"))).getText();
-    }
+    return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h3[data-test='error']"))).getText();
+}
 
     public void clickFinish() {
         wait.until(ExpectedConditions.elementToBeClickable(By.id("finish"))).click();
