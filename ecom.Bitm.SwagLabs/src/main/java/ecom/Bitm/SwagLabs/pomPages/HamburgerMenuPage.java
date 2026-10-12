@@ -68,13 +68,17 @@ public class HamburgerMenuPage {
     }
 
     public void closeMenuIfOpen() {
-        List<WebElement> buttons = driver.findElements(By.id("react-burger-cross-btn"));
+    List<WebElement> buttons = driver.findElements(By.id("react-burger-cross-btn"));
 
-        if (!buttons.isEmpty() && buttons.get(0).isDisplayed()) {
+    if (!buttons.isEmpty()) {
+        wait.until(ExpectedConditions.visibilityOf(buttons.get(0)));
+
+        if (buttons.get(0).isDisplayed()) {
             wait.until(ExpectedConditions.elementToBeClickable(buttons.get(0))).click();
-            wait.until(ExpectedConditions.invisibilityOf(buttons.get(0)));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("react-burger-cross-btn")));
         }
     }
+}
 
     public void clickAllItems() {
         wait.until(ExpectedConditions.elementToBeClickable(allItems)).click();
@@ -109,17 +113,17 @@ public class HamburgerMenuPage {
     }
 
     public void expandDynamicCatalog() {
-        wait.until(ExpectedConditions.elementToBeClickable(dynamicCatalog));
+    wait.until(ExpectedConditions.elementToBeClickable(dynamicCatalog));
 
-        if (!"true".equals(dynamicCatalog.getAttribute("aria-expanded"))) {
-            dynamicCatalog.click();
-        }
-
-        wait.until(ExpectedConditions.visibilityOf(dynamicCatalogSubmenu));
-        wait.until(ExpectedConditions.visibilityOf(lazyLoad));
-        wait.until(ExpectedConditions.visibilityOf(spinner));
-        wait.until(ExpectedConditions.visibilityOf(slider));
+    if (!"true".equals(dynamicCatalog.getAttribute("aria-expanded"))) {
+        wait.until(ExpectedConditions.elementToBeClickable(dynamicCatalog)).click();
     }
+
+    wait.until(ExpectedConditions.visibilityOf(dynamicCatalogSubmenu));
+    wait.until(ExpectedConditions.visibilityOf(lazyLoad));
+    wait.until(ExpectedConditions.visibilityOf(spinner));
+    wait.until(ExpectedConditions.visibilityOf(slider));
+}
 
     public void clickLazyLoad() {
         wait.until(ExpectedConditions.elementToBeClickable(lazyLoad)).click();
