@@ -65,21 +65,28 @@ public class ProductsPage {
     private WebElement remove;
     
     public void removecart() {
-        remove.click();
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(remove)).click();
+}
 
     public void Visibledata() {
-        for (WebElement i : inventoryItems) {
-            Assert.assertTrue(i.isDisplayed());
-        }
-        System.out.println("Product data is visible");
+    wait.until(ExpectedConditions.visibilityOfAllElements(inventoryItems));
+
+    for (WebElement i : inventoryItems) {
+        wait.until(ExpectedConditions.visibilityOf(i));
+        Assert.assertTrue(i.isDisplayed());
     }
 
+    System.out.println("Product data is visible");
+}
+
     public void productrefresh() {
-        driver.navigate().refresh();
-        Assert.assertTrue(product.isDisplayed());
-        System.out.println("User is still logged in");
-    }
+    driver.navigate().refresh();
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".inventory_item_img")));
+
+    Assert.assertTrue(product.isDisplayed());
+    System.out.println("User is still logged in");
+}
 
     public void menu() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(menuclick));
@@ -92,9 +99,11 @@ public class ProductsPage {
     }
 
     public void getInventoryItems() {
-        Assert.assertEquals(inventoryItems.size(), 6);
-        System.out.println("Every Product has cart control");
-    }
+    wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector(".inventory_item"), 6));
+
+    Assert.assertEquals(driver.findElements(By.cssSelector(".inventory_item")).size(), 6);
+    System.out.println("Every Product has cart control");
+}
 
     public void getAddtocart() throws InterruptedException {
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Products']")));
@@ -106,73 +115,93 @@ public class ProductsPage {
     }
 
     public void getClickproduct() {
-        String text = clickproduct.getText();
-        clickproduct.click();
-        Assert.assertEquals(text, "Sauce Labs Backpack");
-        System.out.println("Corresponding page opened");
-    }
+    String text = wait.until(ExpectedConditions.visibilityOf(clickproduct)).getText();
+
+    wait.until(ExpectedConditions.elementToBeClickable(clickproduct)).click();
+
+    Assert.assertEquals(text, "Sauce Labs Backpack");
+    System.out.println("Corresponding page opened");
+}
 
     public void getExpectedproductdata() {
-        String text = clickproduct.getText();
-        Assert.assertEquals(text, "Sauce Labs Backpack");
-        System.out.println("Expected Product is Visible");
-    }
+    String text = wait.until(ExpectedConditions.visibilityOf(clickproduct)).getText();
+
+    Assert.assertEquals(text, "Sauce Labs Backpack");
+    System.out.println("Expected Product is Visible");
+}
 
     public boolean checkproduct(String expectedProduct) {
-        for (WebElement productItem : productNames) {
-            if (productItem.getText().equals(expectedProduct)) {
-                return true;
-            }
+    wait.until(ExpectedConditions.visibilityOfAllElements(productNames));
+
+    for (WebElement productItem : productNames) {
+        if (productItem.getText().equals(expectedProduct)) {
+            return true;
         }
-        return false;
     }
+
+    return false;
+}
     
     public void getProduct() {
-        Assert.assertTrue(product.isDisplayed());
-        System.out.println("Product is Displayed");
-    }
+    wait.until(ExpectedConditions.visibilityOf(product));
+
+    Assert.assertTrue(product.isDisplayed());
+    System.out.println("Product is Displayed");
+}
 
     public void verifyProductsPage() {
-        Assert.assertTrue(productsText.isDisplayed());
-        System.out.println("Inventory Homepage Displayed");
-    }
+    wait.until(ExpectedConditions.visibilityOf(productsText));
+
+    Assert.assertTrue(productsText.isDisplayed());
+    System.out.println("Inventory Homepage Displayed");
+}
 
     public void addBackpackToCart() {
-        backpackAddToCartBtn.click();
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(backpackAddToCartBtn)).click();
+}
 
     public void verifyCartContainsOneItem() throws InterruptedException {
-    	Thread.sleep(4000);
-        Assert.assertTrue(cartBadge.isDisplayed() && cartBadge.getText().equals("1"));
-        System.out.println("cart badge reflect the added item count");
-    }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("shopping_cart_badge")));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(By.className("shopping_cart_badge"), "1"));
+
+    Assert.assertTrue(cartBadge.isDisplayed() && cartBadge.getText().equals("1"));
+    System.out.println("cart badge reflect the added item count");
+}
     
     public void clickCartIcon() {
-        cartIcon.click();
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(cartIcon)).click();
+}
 
     public void clickCart() throws InterruptedException {
-    	Thread.sleep(3000);
-        cartIcon.click();
-        Thread.sleep(2000);
-        Assert.assertTrue(cartpagetitle.isDisplayed());
-        System.out.println("Cart navigation is successfull");
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(cartIcon)).click();
+
+    wait.until(ExpectedConditions.urlContains("cart.html"));
+    wait.until(ExpectedConditions.visibilityOf(cartpagetitle));
+
+    Assert.assertTrue(cartpagetitle.isDisplayed());
+    System.out.println("Cart navigation is successfull");
+}
 
     public void verifyBackpackAddToCartVisible() {
-        Assert.assertTrue(backpackAddToCartBtn.isDisplayed() && backpackAddToCartBtn.isEnabled());
-        System.out.println("Backpack Add to cart button is visible and enabled");
-    }
+    wait.until(ExpectedConditions.visibilityOf(backpackAddToCartBtn));
+    wait.until(ExpectedConditions.elementToBeClickable(backpackAddToCartBtn));
+
+    Assert.assertTrue(backpackAddToCartBtn.isDisplayed() && backpackAddToCartBtn.isEnabled());
+    System.out.println("Backpack Add to cart button is visible and enabled");
+}
 
     public void verifyBackpackRemoveButtonVisible() {
-        WebElement removeButton = driver.findElement(By.id("remove-sauce-labs-backpack"));
-        Assert.assertTrue(removeButton.isDisplayed());
-        System.out.println("Backpack button changed to Remove");
-    }
+    WebElement removeButton = wait.until(
+        ExpectedConditions.visibilityOfElementLocated(By.id("remove-sauce-labs-backpack"))
+    );
+
+    Assert.assertTrue(removeButton.isDisplayed());
+    System.out.println("Backpack button changed to Remove");
+}
 
     public void addBikeLightToCart() {
-        bikeLightAddToCartBtn.click();
-    }
+    wait.until(ExpectedConditions.elementToBeClickable(bikeLightAddToCartBtn)).click();
+}
 	private void waitForInventoryPage() {
     wait.until(ExpectedConditions.urlContains("inventory.html"));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".inventory_list")));
