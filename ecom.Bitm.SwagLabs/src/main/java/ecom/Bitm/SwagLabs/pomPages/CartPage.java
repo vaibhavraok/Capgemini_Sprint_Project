@@ -56,14 +56,18 @@ public class CartPage {
     }
 
     public void verifyCartBadgeCount(String expectedCount) {
-        if (expectedCount == null || expectedCount.isEmpty()) {
-            Assert.assertFalse(isCartBadgeDisplayed(), "Cart badge should not be displayed");
-            return;
-        }
-        wait.until(ExpectedConditions.visibilityOf(cartBadge));
-        Assert.assertEquals(cartBadge.getText(), expectedCount);
-        System.out.println("Cart badge count: " + expectedCount);
+    if (expectedCount == null || expectedCount.isEmpty()) {
+        wait.until(d -> !isCartBadgeDisplayed());
+        Assert.assertFalse(isCartBadgeDisplayed(), "Cart badge should not be displayed");
+        return;
     }
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("shopping_cart_badge")));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(By.className("shopping_cart_badge"), expectedCount));
+
+    Assert.assertEquals(driver.findElement(By.className("shopping_cart_badge")).getText(), expectedCount);
+    System.out.println("Cart badge count: " + expectedCount);
+}
 
     public boolean isCartBadgeDisplayed() {
         List<WebElement> badges = driver.findElements(By.className("shopping_cart_badge"));
@@ -71,39 +75,60 @@ public class CartPage {
     }
 
     public int getCartItemCount() {
-        return driver.findElements(By.className("cart_item")).size();
-    }
+    wait.until(ExpectedConditions.urlContains("cart.html"));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cart_list")));
+
+    return wait.until(d -> {
+        List<WebElement> items = d.findElements(By.className("cart_item"));
+        return items.size();
+    });
+}
 
     public void verifyProductInCart(String productName) {
-        WebElement item = getCartItem(productName);
-        Assert.assertNotNull(item, "Product not found in cart: " + productName);
-        String actualName = item.findElement(By.className("inventory_item_name")).getText();
-        Assert.assertEquals(actualName, productName);
-        System.out.println(productName + " is present");
-    }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cart_list")));
+
+    WebElement item = wait.until(d -> getCartItem(productName));
+    Assert.assertNotNull(item, "Product not found in cart: " + productName);
+
+    String actualName = item.findElement(By.className("inventory_item_name")).getText();
+    Assert.assertEquals(actualName, productName);
+
+    System.out.println(productName + " is present");
+}
 
     public boolean isProductInCart(String productName) {
-        for (WebElement item : driver.findElements(By.className("cart_item"))) {
-            String name = item.findElement(By.className("inventory_item_name")).getText();
-            if (name.equals(productName)) {
-                return true;
-            }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cart_list")));
+
+    for (WebElement item : driver.findElements(By.className("cart_item"))) {
+        String name = item.findElement(By.className("inventory_item_name")).getText();
+
+        if (name.equals(productName)) {
+            return true;
         }
-        return false;
     }
+
+    return false;
+}
 
     public void removeProduct(String productName) {
-        WebElement item = getCartItem(productName);
-        Assert.assertNotNull(item, "Product not found in cart: " + productName);
-        item.findElement(By.tagName("button")).click();
-        wait.until(d -> !isProductInCart(productName));
-        System.out.println(productName + " removed from cart");
-    }
+    WebElement item = wait.until(d -> getCartItem(productName));
+
+    Assert.assertNotNull(item, "Product not found in cart: " + productName);
+
+    wait.until(ExpectedConditions.elementToBeClickable(item.findElement(By.tagName("button")))).click();
+
+    wait.until(d -> !isProductInCart(productName));
+
+    System.out.println(productName + " removed from cart");
+}
 
     public void verifyProductRemoved(String productName) {
-        Assert.assertFalse(isProductInCart(productName), productName + " is still present in cart");
-        System.out.println(productName + " is removed successfully");
-    }
+    wait.until(d -> !isProductInCart(productName));
+
+    Assert.assertFalse(isProductInCart(productName), productName + " is still present in cart");
+
+    System.out.println(productName + " is removed successfully");
+}
 
     public void continueShopping() {
         wait.until(ExpectedConditions.elementToBeClickable(continueShoppingButton)).click();
@@ -128,13 +153,14 @@ public class CartPage {
     }
     
     public void verifyProductNotInCart(String productName) {
-        List<WebElement> products = driver.findElements(By.xpath("//div[@class='inventory_item_name']"));
-        for (WebElement product : products) {
-            if (product.getText().equals(productName)) {
-                Assert.fail("Product is still present in the cart: " + productName);
-            }
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cart_list")));
+
+    for (WebElement product : driver.findElements(By.xpath("//div[@class='inventory_item_name']"))) {
+        if (product.getText().equals(productName)) {
+            Assert.fail("Product is still present in the cart: " + productName);
         }
     }
+}
     
     public String backpack() throws IOException {
         return ExcelUtility.getData("Sheet2", 0, 0);
