@@ -57,6 +57,7 @@ public class HamburgerMenuPage {
     private WebElement slider;
 
     public void openMenu() {
+        wait.until(ExpectedConditions.urlContains("inventory.html"));
         wait.until(ExpectedConditions.elementToBeClickable(hamBurger)).click();
         wait.until(ExpectedConditions.visibilityOf(allItems));
     }
