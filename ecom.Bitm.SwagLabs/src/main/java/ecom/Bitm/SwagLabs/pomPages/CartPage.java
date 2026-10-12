@@ -47,7 +47,8 @@ public class CartPage {
 
     public void openCart() {
         PageFactory.initElements(driver, this);
-        wait.until(ExpectedConditions.elementToBeClickable(cartIcon));
+        wait.until(ExpectedConditions.elementToBeClickable(cartIcon)).click();
+        wait.until(ExpectedConditions.urlContains("cart.html"));
         cartIcon.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".title")));
         String actualTitle = driver.findElement(By.cssSelector(".title")).getText();
