@@ -173,51 +173,67 @@ public class ProductsPage {
     public void addBikeLightToCart() {
         bikeLightAddToCartBtn.click();
     }
-
+	private void waitForInventoryPage() {
+    wait.until(ExpectedConditions.urlContains("inventory.html"));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".inventory_list")));
+    wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector(".inventory_item"), 0));
+}
     public void addProductToCart(String productName) {
-        for (WebElement item : inventoryItems) {
-            String actualName = item.findElement(By.className("inventory_item_name")).getText();
-            if (actualName.equals(productName)) {
-                item.findElement(By.tagName("button")).click();
-                return;
+		waitForInventoryPage();
+        for (WebElement item : driver.findElements(By.cssSelector(".inventory_item"))) {
+            String actualName = item.findElement(By.className("inventory_item_name")).getText().trim();
+            if(actualName.equals(productName.trim())){
+                WebElement button = item.findElement(By.tagName("button"));
+	            wait.until(ExpectedConditions.elementToBeClickable(button));
+	            button.click();
+	            wait.until(ExpectedConditions.textToBePresentInElement(button, "Remove"));
+	            return;
             }
         }
         Assert.fail("Product not found: " + productName);
     }
 
     public void verifyAddToCartButtonVisible(String productName) {
-        for (WebElement item : inventoryItems) {
-            String actualName = item.findElement(By.className("inventory_item_name")).getText();
-            if (actualName.equals(productName)) {
+		waitForInventoryPage();
+        for (WebElement item : driver.findElements(By.cssSelector(".inventory_item"))) {
+            String actualName = item.findElement(By.className("inventory_item_name")).getText().trim();
+            if (actualName.equals(productName.trim())) {
                 WebElement button = item.findElement(By.tagName("button"));
-                Assert.assertTrue(button.isDisplayed());
-                Assert.assertTrue(button.isEnabled());
-                System.out.println(productName + " Add to cart button is visible and enabled");
-                return;
+
+	            wait.until(ExpectedConditions.visibilityOf(button));
+	            Assert.assertTrue(button.isDisplayed(),"Add to Cart button is not visible");
+	            Assert.assertTrue(button.isEnabled(),"Add to Cart button is not enabled");
+	            return;
             }
         }
         Assert.fail("Product not found: " + productName);
     }
 
     public void verifyRemoveButtonVisible(String productName) {
-        for (WebElement item : inventoryItems) {
-            String actualName = item.findElement(By.className("inventory_item_name")).getText();
-            if (actualName.equals(productName)) {
-                WebElement button = item.findElement(By.tagName("button"));
-                Assert.assertEquals(button.getText(), "Remove");
-                System.out.println(productName + " button changed to Remove");
-                return;
+		waitForInventoryPage();
+		for (WebElement item : driver.findElements( By.cssSelector(".inventory_item"))) {
+        	String actualName = item.findElement(By.className("inventory_item_name")).getText().trim();
+
+	        if (actualName.equals(productName.trim())) {
+	            WebElement button = item.findElement(By.tagName("button"));
+	
+	            wait.until(ExpectedConditions.textToBePresentInElement(button, "Remove"));
+	
+	            Assert.assertEquals(button.getText(), "Remove");
+	            return;
             }
         }
         Assert.fail("Product not found: " + productName);
     }
 
     public String getProductPrice(String productName) {
-        for (WebElement item : inventoryItems) {
-            String actualName = item.findElement(By.className("inventory_item_name")).getText();
-            if (actualName.equals(productName)) {
-                return item.findElement(By.className("inventory_item_price")).getText();
-            }
+        waitForInventoryPage();
+		for (WebElement item : driver.findElements(By.cssSelector(".inventory_item"))) {
+			String actualName = item.findElement(By.className("inventory_item_name")).getText().trim();
+
+	        if (actualName.equals(productName.trim())) {
+	            return item.findElement(By.className("inventory_item_price")).getText();
+        }
         }
         Assert.fail("Product not found: " + productName);
         return "";
