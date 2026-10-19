@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\Capgemini Training Period\Project\NinzaHRM\ecom.Bitm.SwagLabs\.metadata\.plugins\org.eclipse.jdt.core
+3591610432.index
+1450893838.index
+1865797976.index

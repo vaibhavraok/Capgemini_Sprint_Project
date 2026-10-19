@@ -1,0 +1,320 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 19 15:23:45 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>24 seconds (24319 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectsPageNavigation()'><b>verifyProjectsPageNavigation</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br/>
+<a href="#Output-1213131534" onClick='toggleBox("Output-1213131534", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1213131534" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1213131534">
+verifyProjectsPageNavigation test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.login.LoginPage_Test.verifyLoginWithInvalidCredentials()'><b>verifyLoginWithInvalidCredentials</b><br>Test class: com.Bitm.NinzaHRM.login.LoginPage_Test<br>Parameters: admin, admin123<br/>
+<a href="#Output-2126131610" onClick='toggleBox("Output-2126131610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2126131610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2126131610">
+verifyLoginWithInvalidCredentials test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.login.LoginPage_Test@5bda8e08</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.login.LoginPage_Test.verifyLoginWithValidCredentials()'><b>verifyLoginWithValidCredentials</b><br>Test class: com.Bitm.NinzaHRM.login.LoginPage_Test<br/>
+<a href="#Output-1575860364" onClick='toggleBox("Output-1575860364", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1575860364" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1575860364">
+verifyLoginWithValidCredentials test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.login.LoginPage_Test@5bda8e08</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.home.HomePage_Test.verifyHomePageAfterRefresh()'><b>verifyHomePageAfterRefresh</b><br>Test class: com.Bitm.NinzaHRM.home.HomePage_Test<br/>
+<a href="#Output-1837403014" onClick='toggleBox("Output-1837403014", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1837403014" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1837403014">
+verifyHomePageAfterRefresh test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.Bitm.NinzaHRM.home.HomePage_Test@3b0090a4</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.home.HomePage_Test.verifyHomePageNavigation()'><b>verifyHomePageNavigation</b><br>Test class: com.Bitm.NinzaHRM.home.HomePage_Test<br/>
+<a href="#Output-965353934" onClick='toggleBox("Output-965353934", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-965353934" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-965353934">
+verifyHomePageNavigation test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.home.HomePage_Test@3b0090a4</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectsPageAfterRefresh()'><b>verifyProjectsPageAfterRefresh</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br/>
+<a href="#Output-1146149588" onClick='toggleBox("Output-1146149588", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1146149588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1146149588">
+verifyProjectsPageAfterRefresh test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.settings.SettingsPage_Test.verifyTokenLifespanSelection()'><b>verifyTokenLifespanSelection</b><br>Test class: com.Bitm.NinzaHRM.settings.SettingsPage_Test<br/>
+<a href="#Output-248589046" onClick='toggleBox("Output-248589046", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-248589046" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-248589046">
+verifyTokenLifespanSelection test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.settings.SettingsPage_Test@1fa121e2</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.login.LoginPage_Test.verifySuccessfulLoginNavigatesToDashboard()'><b>verifySuccessfulLoginNavigatesToDashboard</b><br>Test class: com.Bitm.NinzaHRM.login.LoginPage_Test<br/>
+<a href="#Output-1858147462" onClick='toggleBox("Output-1858147462", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1858147462" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1858147462">
+verifySuccessfulLoginNavigatesToDashboard test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Bitm.NinzaHRM.login.LoginPage_Test@5bda8e08</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.home.HomePage_Test.verifyHomeLinkIsVisible()'><b>verifyHomeLinkIsVisible</b><br>Test class: com.Bitm.NinzaHRM.home.HomePage_Test<br/>
+<a href="#Output-2068922234" onClick='toggleBox("Output-2068922234", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2068922234" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2068922234">
+verifyHomeLinkIsVisible test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Bitm.NinzaHRM.home.HomePage_Test@3b0090a4</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.settings.SettingsPage_Test.verifyNewTokenGeneration()'><b>verifyNewTokenGeneration</b><br>Test class: com.Bitm.NinzaHRM.settings.SettingsPage_Test<br/>
+<a href="#Output-2029691607" onClick='toggleBox("Output-2029691607", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2029691607" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2029691607">
+verifyNewTokenGeneration test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.settings.SettingsPage_Test@1fa121e2</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectCreation()'><b>verifyProjectCreation</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br>Parameters: Database, Rahul<br/>
+<a href="#Output-623881791" onClick='toggleBox("Output-623881791", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-623881791" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-623881791">
+verifyProjectCreation test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.home.HomePage_Test.verifyUserProfileImageIsDisplayed()'><b>verifyUserProfileImageIsDisplayed</b><br>Test class: com.Bitm.NinzaHRM.home.HomePage_Test<br/>
+<a href="#Output-1345311389" onClick='toggleBox("Output-1345311389", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1345311389" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1345311389">
+verifyUserProfileImageIsDisplayed test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Bitm.NinzaHRM.home.HomePage_Test@3b0090a4</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.settings.SettingsPage_Test.verifySettingsPageNavigation()'><b>verifySettingsPageNavigation</b><br>Test class: com.Bitm.NinzaHRM.settings.SettingsPage_Test<br/>
+<a href="#Output-2077832458" onClick='toggleBox("Output-2077832458", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2077832458" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2077832458">
+verifySettingsPageNavigation test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.settings.SettingsPage_Test@1fa121e2</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectDeletion()'><b>verifyProjectDeletion</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br>Parameters: Database, Application UI, VRK<br/>
+<a href="#Output-1456351261" onClick='toggleBox("Output-1456351261", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1456351261" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1456351261">
+verifyProjectDeletion test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectSearch()'><b>verifyProjectSearch</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br>Parameters: Database<br/>
+<a href="#Output-878099907" onClick='toggleBox("Output-878099907", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-878099907" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-878099907">
+verifyProjectSearch test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.login.LoginPage_Test.verifyLoginWithBlankCredentials()'><b>verifyLoginWithBlankCredentials</b><br>Test class: com.Bitm.NinzaHRM.login.LoginPage_Test<br/>
+<a href="#Output-1215124251" onClick='toggleBox("Output-1215124251", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1215124251" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1215124251">
+verifyLoginWithBlankCredentials test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.login.LoginPage_Test@5bda8e08</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.home.HomePage_Test.verifyUserProfileDetailsAreDisplayed()'><b>verifyUserProfileDetailsAreDisplayed</b><br>Test class: com.Bitm.NinzaHRM.home.HomePage_Test<br/>
+<a href="#Output-548766883" onClick='toggleBox("Output-548766883", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-548766883" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-548766883">
+verifyUserProfileDetailsAreDisplayed test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.home.HomePage_Test@3b0090a4</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.settings.SettingsPage_Test.verifyAuthorizationPermissionSelection()'><b>verifyAuthorizationPermissionSelection</b><br>Test class: com.Bitm.NinzaHRM.settings.SettingsPage_Test<br/>
+<a href="#Output-43584384" onClick='toggleBox("Output-43584384", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-43584384" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-43584384">
+verifyAuthorizationPermissionSelection test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.Bitm.NinzaHRM.settings.SettingsPage_Test@1fa121e2</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectUpdate()'><b>verifyProjectUpdate</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br>Parameters: Database, Application UI, VRK<br/>
+<a href="#Output-1161252622" onClick='toggleBox("Output-1161252622", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1161252622" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1161252622">
+verifyProjectUpdate test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+<tr>
+<td title='com.Bitm.NinzaHRM.projects.ProjectsPage_Test.verifyProjectCreationBlankData()'><b>verifyProjectCreationBlankData</b><br>Test class: com.Bitm.NinzaHRM.projects.ProjectsPage_Test<br/>
+<a href="#Output-1044094305" onClick='toggleBox("Output-1044094305", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1044094305" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1044094305">
+verifyProjectCreationBlankData test case completed<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Bitm.NinzaHRM.projects.ProjectsPage_Test@3cd3e762</td></tr>
+</table><p>
+</body>
+</html>

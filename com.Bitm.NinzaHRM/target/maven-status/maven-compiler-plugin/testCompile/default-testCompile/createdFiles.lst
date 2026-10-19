@@ -1,0 +1,4 @@
+ecom\Bitm\SwagLabs\checkout\CheckoutPage_Test.class
+ecom\Bitm\SwagLabs\login\Loginpage_Test.class
+ecom\Bitm\SwagLabs\addToCart\CartPage_Test.class
+ecom\Bitm\SwagLabs\product\ProductPage_Test.class
